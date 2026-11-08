@@ -1,0 +1,27 @@
+{
+  "name": "pro-alifbo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "bot": "node bot/src/index.js",
+    "api": "node api/src/index.js",
+    "extension:build": "node scripts/build-extension.mjs",
+    "extension:test": "node scripts/check-extension.mjs",
+    "web": "next dev web --webpack --hostname 127.0.0.1 --port 3000",
+    "web:sync": "node scripts/sync-web.mjs",
+    "web:test": "node scripts/check-web.mjs",
+    "test": "node --test",
+    "web:build": "next build web --webpack"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "playwright": "^1.56.1"
+  },
+  "dependencies": {
+    "next": "^16.4.5",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  }
+}

@@ -1,0 +1,44 @@
+:root { color-scheme: light; font-family: 'Segoe UI', system-ui, sans-serif; color: #173d2c; background: #fff; --green: #218452; --line: #e1ebe5; }
+* { box-sizing: border-box; }
+body { width: 420px; margin: 0; }
+button, textarea, input { font: inherit; }
+.brand { display: flex; align-items: center; gap: 9px; padding: 7px 18px; border-bottom: 1px solid var(--line); }
+.brand img { object-fit: contain; flex-shrink: 0; animation: brand-enter 350ms ease-out both; }
+h1 { margin: 0; font-size: 15px; font-weight: 700; letter-spacing: -.35px; animation: brand-enter 400ms 70ms ease-out both; }
+.status-dot { width: 8px; height: 8px; background: #33a269; border-radius: 50%; margin-left: auto; box-shadow: 0 0 0 5px #edf7f0; }
+main { padding: 12px 16px 7px; }
+.input-card, .output-card { border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+.input-card:focus-within { border-color: #48a675; box-shadow: 0 0 0 3px #edf7f0; }
+.field-top { display: flex; justify-content: space-between; align-items: center; padding: 10px 12px 0; font-size: 12px; font-weight: 600; }
+.badge { color: #278151; background: #eaf6ee; border-radius: 6px; padding: 4px 7px; font-size: 10px; font-weight: 500; }
+textarea { display: block; width: 100%; resize: none; border: 0; outline: none; background: transparent; color: #1c3427; font-size: 14px; line-height: 1.6; padding: 8px 12px; overflow-y: auto; scrollbar-width: thin; scrollbar-color: #8ec7a4 #eff7f1; scrollbar-gutter: stable; }
+textarea::-webkit-scrollbar { width: 7px; }
+textarea::-webkit-scrollbar-track { background: #eff7f1; border-radius: 8px; margin-block: 6px; }
+textarea::-webkit-scrollbar-thumb { background: #8ec7a4; border: 2px solid #eff7f1; border-radius: 8px; }
+textarea::-webkit-scrollbar-thumb:hover { background: #489b68; }
+textarea::-webkit-scrollbar-button { display: none; }
+textarea::placeholder { color: #97a49c; font-size: 13px; }
+#source { height: 98px; }
+.field-bottom { display: flex; justify-content: space-between; align-items: center; padding: 0 12px 8px; color: #8a978e; font-size: 10px; }
+#clear { padding: 4px 0 4px 8px; color: #488664; background: none; border: 0; cursor: pointer; font-size: 11px; }
+#clear:disabled { color: #a6b2aa; cursor: default; }
+.target { border: 0; padding: 0; margin: 12px 0; }
+.target legend { font-size: 11px; color: #6c7c72; margin-bottom: 8px; }
+.segments { display: grid; grid-template-columns: 1fr 1fr 1.2fr; padding: 4px; gap: 4px; background: #f2f6f3; border-radius: 11px; }
+.segments label { position: relative; cursor: pointer; }
+.segments input { position: absolute; opacity: 0; width: 100%; height: 100%; margin: 0; cursor: pointer; }
+.segments span { display: block; text-align: center; padding: 8px 4px; border-radius: 8px; color: #6d7e73; font-size: 12px; transition: background-color 180ms ease, color 180ms ease, box-shadow 180ms ease; }
+.segments input:checked + span { background: #fff; color: #197446; font-weight: 600; box-shadow: 0 1px 5px #16382212; }
+.segments input:focus-visible + span, button:focus-visible { outline: 2px solid #218452; outline-offset: 2px; }
+.output-card { background: #f7fbf8; border-color: #ddece2; }
+#count { font-size: 10px; color: #819489; font-weight: 400; }
+#result { height: 88px; color: #1d7148; font-family: 'Times New Roman', Times, serif; font-size: 17px; line-height: 1.45; }
+.output-card:focus-within { border-color: #48a675; box-shadow: 0 0 0 3px #edf7f0; }
+#result:focus-visible { outline: none; box-shadow: none; }
+.copy { display: flex; align-items: center; justify-content: center; gap: 7px; margin-top: 12px; width: 100%; padding: 11px; border: 0; border-radius: 10px; background: var(--green); color: white; font-size: 13px; font-weight: 600; cursor: pointer; transition: background-color 180ms ease, transform 180ms ease; }
+.copy:hover:not(:disabled) { background: #186b41; }
+.copy:active:not(:disabled) { transform: scale(.985); }
+.copy:disabled { background: #e4eee7; color: #8ba794; cursor: default; }
+#feedback { min-height: 14px; margin: 5px 0 0; font-size: 10px; text-align: center; color: #397f57; }
+@keyframes brand-enter { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }

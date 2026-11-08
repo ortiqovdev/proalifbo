@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Pro Alifbo",
+  "version": "0.1.3",
+  "description": "Matnni o‘zbek lotin, kirill va yangi alifbo o‘rtasida o‘giring. Internetsiz ishlaydi.",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwTYHtahHGEXpTgdz6sd44xAzDK6ljo1RE2IuJjCzRUhK6SbJCGPSVq2Ey3ygB6Rw0ea24Cei+64nRssKTu/DUqP/CIii1OqTfUm6+qW+NGy88xiR2JdLwKtwJ1MkG1r55lyUOOV0RkpisN3/oFe8RlO/LlbEvWvjDIgn0m31SPJY+sr36Txvz0BSMYuVwqov/yBSSSyd5PfJgtx5ThsEEWNdSTPKtUBWCl7Oz4jNHNR1lfkYdr0PEJjDQzcEZvNJYmOEDlmJVtQELCcA4aqtOUWE57ANs4TCePBrK14/7+wI87vr/3Zc28Exb7+vYrvVwb9dymhbFBeUdi8sPmLdXwIDAQAB",
+  "permissions": ["storage", "clipboardWrite"],
+  "icons": { "128": "assets/logo.png" },
+  "action": {
+    "default_title": "Pro Alifbo — matn konvertori",
+    "default_popup": "popup.html",
+    "default_icon": "assets/logo.png"
+  }
+}

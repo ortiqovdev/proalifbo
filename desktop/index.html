@@ -1,0 +1,27 @@
+<!doctype html><html lang="uz"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'"><title>Pro Alifbo</title><link rel="stylesheet" href="style.css"></head><body>
+<header><div class="brand"><img src="logo.png" alt="">Pro Alifbo</div><label class="auto">Avtoyozuv <input id="auto" type="checkbox" role="switch"><span></span></label></header>
+<nav><button id="text-tab" aria-pressed="true">Matn</button><button id="file-tab" aria-pressed="false">Fayllar</button><button id="about-tab" aria-pressed="false">Biz haqimizda</button></nav><main id="editor"><section><div class="bar"><label for="source">Matningiz</label><button id="clear" title="Matnni tozalash" aria-label="Matnni tozalash">×</button></div><textarea id="source" placeholder="Matn yozing yoki joylang…" autofocus></textarea></section>
+<section class="result"><div class="bar"><label for="result">Natija</label><select id="mode" aria-label="Natija alifbosi"><option value="new">Yangi alifbo</option><option value="latin">Lotin</option><option value="kirill">Кирилл</option></select><button id="copy" disabled>Nusxa olish</button></div><textarea readonly id="result" placeholder="Natija shu yerda ko‘rinadi"></textarea></section>
+</main>
+<section id="files" hidden aria-labelledby="file-title">
+  <div><h1 id="file-title">Fayl yozuvini o‘girish</h1><p>Hujjatni tanlang va nusxasini kerakli alifboda saqlang.</p></div>
+  <button id="pick"><span class="file-symbol" aria-hidden="true">↑</span><strong id="pick-label">Fayl tanlash</strong><small>Word, Excel, PowerPoint, OpenDocument va TXT · 50 MB gacha</small></button>
+  <p id="filename"></p>
+  <div class="file-controls"><label for="file-mode">Natija alifbosi</label><select id="file-mode"><option value="new">Yangi alifbo</option><option value="latin">Lotin</option><option value="kirill">Кирилл</option></select><button id="save" disabled>Nusxasini saqlash</button></div>
+  <p role="status" id="status"></p>
+</section><section id="about" hidden aria-labelledby="about-title">
+  <div class="about-heading"><img src="logo.png" alt=""><div><h1 id="about-title">Biz haqimizda</h1><p>Pro Alifbo’ni <strong>AIUnion</strong> ishlab chiqqan.</p></div></div>
+  <p>Pro Alifbo o‘zbekcha matn va hujjatlarni lotin, kirill va yangi alifbo o‘rtasida o‘giradi. Masalan, «Шаҳар» so‘zini «Shahar» yoki «Şahar» shaklida yozishingiz mumkin.</p>
+  <h2>Bizning dasturlar</h2><div class="about-grid">
+    <article><h3>Windows dasturi</h3><p>Matn, Office hujjatlari va probeldan keyin ishlaydigan Avtoyozuv.</p><button data-page="text">Konvertorni ochish</button></article>
+    <article><h3>Mobil ilova</h3><p>Android va iOS uchun konvertor va Pro Alifbo klaviaturasi.</p></article>
+    <article><h3>Telegram bot</h3><p>Matningizni @proalifbobot bilan suhbatda o‘giring.</p><a href="https://t.me/proalifbobot" target="_blank">Botni ochish ↗</a></article>
+    <article><h3>Chrome kengaytmasi</h3><p>Brauzer panelidagi ixcham konvertor.</p><button id="extension-save">ZIP yuklab olish ↓</button><span id="extension-status" role="status"></span></article>
+    <article><h3>Web sayt</h3><p>Mahalliy web server ishlaganda konvertor va qo‘llanmalarni oching.</p><a href="http://127.0.0.1:3000/" target="_blank">Saytni ochish ↗</a></article>
+    <article><h3>macOS va Linux</h3><p>Mac va Linux uchun matn va hujjat konvertori.</p></article>
+  </div>
+</section><script src="fflate.js"></script><script type="module" src="renderer.js"></script></body></html>
+
+
+
+

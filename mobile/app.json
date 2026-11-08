@@ -1,0 +1,37 @@
+{
+  "expo": {
+    "name": "Pro Alifbo",
+    "slug": "pro-alifbo",
+    "version": "1.0.0",
+    "icon": "./logo.png",
+    "orientation": "default",
+    "ios": {
+      "bundleIdentifier": "uz.proalifbo.mobile",
+      "supportsTablet": true,
+      "entitlements": {
+        "com.apple.security.application-groups": [
+          "group.uz.proalifbo.mobile"
+        ]
+      }
+    },
+    "android": {
+      "package": "uz.proalifbo.mobile",
+      "blockedPermissions": [
+        "android.permission.CAMERA",
+        "android.permission.READ_MEDIA_IMAGES",
+        "android.permission.READ_MEDIA_VIDEO"
+      ]
+    },
+    "plugins": [
+      [
+        "expo-splash-screen",
+        {
+          "image": "./logo.png",
+          "imageWidth": 96,
+          "backgroundColor": "#f5faf6"
+        }
+      ],
+      "./keyboard/plugin"
+    ]
+  }
+}
